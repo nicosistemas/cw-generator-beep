@@ -11,13 +11,14 @@ caracteres = {
    '8': '---..', '9': '----.', ' ': '/'
 }
 
+## (TIEMPO, FRECUENCIA)
 def play_morse_code(morse_code):
    for char in morse_code:
        if char == '.':
+           os.system('play -n synth %s sin %s' % (0.1,700)) #si anda en mi config
            #os.system('beep -f 1000 -l 400') # beep corto alter
-           os.system('play -n synth %s sin %s' % (0.1,700))
        elif char == '-':
-           os.system('play -n synth %s sin %s' % (0.3,700))
+           os.system('play -n synth %s sin %s' % (0.3,700)) #si anda en mi config
            #os.system('beep -f 1000 -l 800') # beep largo alter
        else:
            # Pausa entre caracteres
@@ -30,11 +31,13 @@ def generate_morse_code(text):
            morse_code += caracteres[char] + ' '
    return morse_code
 
-# Generador de codigo segun input
+# Generador de código según input
 text = input("Enter codigo: ")
 morse_code = generate_morse_code(text)
 
-# Reproductor audio codigo
+# Reproductor audio código
 print(morse_code)
 play_morse_code(morse_code)
 print(morse_code)
+
+#codeado por nicosistemas de corazón
