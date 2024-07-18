@@ -35,4 +35,6 @@ text = input("Enter codigo: ")
 morse_code = generate_morse_code(text)
 
 # Reproductor audio codigo
+print(morse_code)
 play_morse_code(morse_code)
+print(morse_code)
