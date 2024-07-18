@@ -1,4 +1,16 @@
-apt-get install python3-pyaudio
-pip install numpy3
+Dependencias:
 
-run: **python3 cw-generator.py**
+
+```console
+apt-get install python3-pyaudio
+```
+```console
+pip install numpy3
+```
+
+
+Run:
+
+```console
+python3 cw-generator.py
+```
